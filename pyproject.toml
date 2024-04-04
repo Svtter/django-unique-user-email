@@ -1,21 +1,15 @@
-[build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
-
-[project]
+[tool.poetry]
 name = "django-unique-user-email"
-authors = [{name = "Carlton Gibson", email = "carlton.gibson@noumenal.es"}]
+version = "0.1.0"
+description = ""
+authors = ["Carlton Gibson carlton.gibson@noumenal.es", "svtter <svtter@qq.com>"]
 readme = "README.md"
-license = {file = "LICENSE"}
-classifiers = ["License :: OSI Approved :: MIT License"]
-dynamic = ["version", "description"]
-dependencies = ["Django>=4.2"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = ">=4.2"
 
 
-[project.urls]
-Home = "https://noumenal.es/unique_user_email/"
-
-
-
-[tool.flit.module]
-name = "unique_user_email"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
